@@ -113,11 +113,12 @@ compile 'com.squareup.okhttp:okhttp-ws:2.7.2'
 - Initialize the Avaamo embed app with 2 mandatory parameters. (This code sample uses sample data. Please use your `partner_uuid` and create the `user_jwt_token` as mentioned below.
 ```java
   Intent intent = new Intent(MainActivity.this, PartnerLoginActivity.class);
+  // Dummy data
   intent.putExtra("partner_uuid","2671a7f3-4fea-49ae-835a-95771bbe5ffd");
   intent.putExtra("user_jwt_token", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiMTIzNDU2Nzg5MCIsImZpcnN0X25hbWUiOiJKb2huIiwibGFzdF9uYW1lIjoiU21pdGgiLCJlbWFpbCI6ImpzbWl0aEBhdmFhbW8uY29tIiwicGhvbmUiOiIrMTIzNDU2Nzg5IiwiY3VzdG9tMSI6InZhbHVlMSJ9.XDk8boUHwd3fotdDxlmP3cHPthwTw5Y57mXLyc6cc9I");
   startActivity(intent);
 ```
-**Description of paramters**
+**Description of parameters**
 
 Name | Description | Required
 ---- | ----------- | --------
