@@ -85,7 +85,7 @@ compile 'com.squareup.okhttp:okhttp-ws:2.7.2'
   > These dependences get downloaded in about 5 minutes on a 1 MBPS speed internet connection.
 
   8. In your `app/src/main/AndroidManifest.xml` file, set the theme of your application to `@style/Avaamo` theme, and add `tools:replace=”android:theme, android:icon`. Also add the tools namespace to the manifest tag.
-  ```
+  ```xml
       <manifest xmlns:android="http://schemas.android.com/apk/res/android"
        xmlns:tools="http://schemas.android.com/tools"
        package="your_package_name">
