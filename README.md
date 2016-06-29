@@ -1,11 +1,25 @@
-### Avaamo Embed SDK - Instructions
+### Avaamo Embed SDK
 
-###### Before you begin
+
+##### [Prerequisite](#prerequisite)
+##### [Android Studio setup](#setup)
+##### [Initializing the app](#initializing-the-app) 
+### [Customizations](#customizations)
+###### [Change color theme](#change-color-theme)
+###### [Open Avaamo with a deeplink](#open-avaamo-with-a-deeplink)
+###### [Listening for Avaamo events](#listening-for-avaamo-events)
+###### [Access badge count](#access-badge-count)
+
+
+
+#### Prerequisite
 > 1. You should have the SDK 'aar' downloaded.
-> 2. You should have your `parner_uuid` and `secret` available.
+> 2. You should have your `parner_uuid` and `secret` available. 
+
+Please contact your Avaamo account manager to request these details.
 
 
-###### Setup
+#### Setup
 1. Create an android application with Android Studio.
 2. To import the Avaamo Embed SDK, follow these steps.
   1. Go to `File: New Module`.
@@ -136,14 +150,15 @@ user_jwt_token | This is the JWT encoded string. This JWT encoded string has to 
      sdk.init();
   }
 ```
-- Colors
+## Customizations
+##### Change color theme
 ```xml
   <style name="Avaamo.ActionBarStyle">
      <item name="background">yourcolorcode</item>
   </style>
 ```
 
-- Open Avaamo app with deeplinks<br/>
+##### Open Avaamo with a deeplink
 a. While initializing the library
 ```java
        intent.putExtra("deeplink" ,<deeplink url>)
@@ -153,7 +168,7 @@ b. Any time after the library is initialized
 	     AvaamoUtils.openDeeplink(<deeplink url>)
 ```
 
-- Listening for Avaamo events
+##### Listening for Avaamo events
   - For a new message
 ```xml
     <receiver android:name="AvaamoBroadcastReceiver">
@@ -171,7 +186,7 @@ b. Any time after the library is initialized
        }
     }
 ```
-  - For reading badge count
+  ##### Access badge count
 ```java
   AvaamoUtils.getBadge()
 ```
