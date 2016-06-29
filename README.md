@@ -172,6 +172,7 @@ b. Any time after the library is initialized
 ```java
 	     AvaamoUtils.openDeeplink(<deeplink url>)
 ```
+This [ page ](https://github.com/avaamo/java/wiki/Deep-Links) has more information about all the available deeplinks
 
 ##### Listening for Avaamo events
   - For a new message
