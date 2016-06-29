@@ -5,10 +5,10 @@
 ##### [Android Studio setup](#setup)
 ##### [Initializing the app](#initializing-the-app) 
 ### [Customizations](#customizations)
-###### [Change color theme](#change-color-theme)
-###### [Open Avaamo with a deeplink](#open-avaamo-with-a-deeplink)
-###### [Listening for Avaamo events](#listening-for-avaamo-events)
-###### [Access badge count](#access-badge-count)
+###### [Change color theme](#change-color-theme-1)
+###### [Open Avaamo with a deeplink](#open-avaamo-with-a-deeplink-1)
+###### [Listening for Avaamo events](#listening-for-avaamo-events-1)
+###### [Access badge count](#access-badge-count-1)
 
 
 
@@ -186,7 +186,7 @@ b. Any time after the library is initialized
        }
     }
 ```
-  ##### Access badge count
+##### Access badge count
 ```java
   AvaamoUtils.getBadge()
 ```
