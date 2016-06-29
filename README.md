@@ -3,7 +3,7 @@
 
 ##### [Prerequisite](#prerequisite)
 ##### [Android Studio setup](#setup)
-##### [Initializing the app](#initializing-the-app) 
+##### [Initializing the app](#initializing-the-app-1) 
 ### [Customizations](#customizations)
 ###### [Change color theme](#change-color-theme-1)
 ###### [Open Avaamo with a deeplink](#open-avaamo-with-a-deeplink-1)
