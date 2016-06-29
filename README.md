@@ -5,6 +5,7 @@
 ##### [Android Studio setup](#setup)
 ##### [Initializing the app](#initializing-the-app-1) 
 ### [Customizations](#customizations)
+###### [Initialize Avaamo in the background](#initialize-avaamo-in-the-background-1)
 ###### [Change color theme](#change-color-theme-1)
 ###### [Open Avaamo with a deeplink](#open-avaamo-with-a-deeplink-1)
 ###### [Listening for Avaamo events](#listening-for-avaamo-events-1)
@@ -143,14 +144,18 @@ user_jwt_token | This is the JWT encoded string. This JWT encoded string has to 
 
 - That is it!. Avaamo is now embedded in your app. When launched Avaamo embed app shows up like this.
 
-- To initialize the messaging service in the background
+
+## Customizations
+##### Initialize Avaamo in the background
+To start receiving avaamo notifications even before a user tap on a button or a UI elment to launch the Avaamo embed app. 
+
 ```java
   AvaamoSDK sdk = new AvaamoSDK(this);
   if (sdk.isInitialized()) {
      sdk.init();
   }
 ```
-## Customizations
+
 ##### Change color theme
 ```xml
   <style name="Avaamo.ActionBarStyle">
