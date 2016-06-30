@@ -1,11 +1,26 @@
-### Avaamo Embed SDK - Instructions
+### Avaamo Embed SDK
 
-###### Before you begin
+
+##### [Prerequisite](#prerequisite)
+##### [Android Studio setup](#setup)
+##### [Initializing the app](#initializing-the-app-1) 
+### [Customizations](#customizations)
+###### [Initialize Avaamo in the background](#initialize-avaamo-in-the-background-1)
+###### [Change color theme](#change-color-theme-1)
+###### [Open Avaamo with a deeplink](#open-avaamo-with-a-deeplink-1)
+###### [Listening for Avaamo events](#listening-for-avaamo-events-1)
+###### [Access badge count](#access-badge-count-1)
+
+
+
+#### Prerequisite
 > 1. You should have the SDK 'aar' downloaded.
-> 2. You should have your `parner_uuid` and `secret` available.
+> 2. You should have your `parner_uuid` and `secret` available. 
+
+Please contact your Avaamo account manager to request these details.
 
 
-###### Setup
+#### Setup
 1. Create an android application with Android Studio.
 2. To import the Avaamo Embed SDK, follow these steps.
   1. Go to `File: New Module`.
@@ -129,21 +144,26 @@ user_jwt_token | This is the JWT encoded string. This JWT encoded string has to 
 
 - That is it!. Avaamo is now embedded in your app. When launched Avaamo embed app shows up like this.
 
-- To initialize the messaging service in the background
+
+## Customizations
+##### Initialize Avaamo in the background
+To start receiving avaamo notifications even before a user tap on a button or a UI elment to launch the Avaamo embed app. 
+
 ```java
   AvaamoSDK sdk = new AvaamoSDK(this);
   if (sdk.isInitialized()) {
      sdk.init();
   }
 ```
-- Colors
+
+##### Change color theme
 ```xml
   <style name="Avaamo.ActionBarStyle">
      <item name="background">yourcolorcode</item>
   </style>
 ```
 
-- Open Avaamo app with deeplinks<br/>
+##### Open Avaamo with a deeplink
 a. While initializing the library
 ```java
        intent.putExtra("deeplink" ,<deeplink url>)
@@ -152,8 +172,9 @@ b. Any time after the library is initialized
 ```java
 	     AvaamoUtils.openDeeplink(<deeplink url>)
 ```
+This [ page ](https://github.com/avaamo/java/wiki/Deep-Links) has more information about all the available deeplinks
 
-- Listening for Avaamo events
+##### Listening for Avaamo events
   - For a new message
 ```xml
     <receiver android:name="AvaamoBroadcastReceiver">
@@ -171,7 +192,7 @@ b. Any time after the library is initialized
        }
     }
 ```
-  - For reading badge count
+##### Access badge count
 ```java
   AvaamoUtils.getBadge()
 ```
