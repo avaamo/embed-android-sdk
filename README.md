@@ -3,7 +3,7 @@
 
 ##### [Prerequisite](#prerequisite)
 ##### [Android Studio setup](#setup)
-##### [Initializing the app](#initializing-the-app-1) 
+##### [Initializing the app](#initializing-the-app-1)
 ### [Customizations](#customizations)
 ###### [Initialize Avaamo in the background](#initialize-avaamo-in-the-background-1)
 ###### [Change color theme](#change-color-theme-1)
@@ -15,7 +15,7 @@
 
 #### Prerequisite
 > 1. You should have the SDK 'aar' downloaded.
-> 2. You should have your `parner_uuid` and `secret` available. 
+> 2. You should have your `parner_uuid` and `secret` available.
 
 Please contact your Avaamo account manager to request these details.
 
@@ -142,12 +142,17 @@ user_jwt_token | This is the JWT encoded string. This JWT encoded string has to 
 
 > `user_jwt_token` is a JSON Web Token encoded string of the user data. User data needs to be in the JSON format and needs to encoded using HS256 algorithm and embed_secret provided to you by Avaamo. You can find JWT library of your choice and a demo UI to generate the tokens at https://jwt.io/
 
+  Javascript: [Code Samples](https://github.com/avaamo/embed-android-sdk/blob/master/Javascript.md)
+
+  Java: [Code Samples](https://github.com/avaamo/embed-android-sdk/blob/master/Java.md)
+
+
 - That is it!. Avaamo is now embedded in your app. When launched Avaamo embed app shows up like this.
 
 
 ## Customizations
 ##### Initialize Avaamo in the background
-To start receiving avaamo notifications even before a user tap on a button or a UI elment to launch the Avaamo embed app. 
+To start receiving avaamo notifications even before a user tap on a button or a UI elment to launch the Avaamo embed app.
 
 ```java
   AvaamoSDK sdk = new AvaamoSDK(this);
