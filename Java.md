@@ -7,7 +7,7 @@ import io.jsonwebtoken.impl.crypto.MacProvider;
 import java.security.Key;
 
 // 1. Create the JSON string with user properties.
-String payload = "{\"uuid\": \"1234567890\",\"first_name\": \"John\",\"last_name\" : \"Doe\",\"phone\" : \"+111111111\",\"email\" : \"john@email.com\",\"admin\": true}";
+String payload = "{\"uuid\": \"1234567890\",\"first_name\": \"John\",\"last_name\" : \"Doe\",\"phone\" : \"+111111111\",\"email\" : \"john@email.com\",\"custom_attribute1\": \"value1\"}";
 
 // 2. Choose the encoding algorith 'HS256'
 Map<String, Object> header = new HashMap<>();
