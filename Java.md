@@ -45,7 +45,6 @@ header.put("typ", "JWT");
 byte[] apiKeySecretBytes = "<YOUR SECRET KEY>".getBytes();
 Key signingKey = new SecretKeySpec(apiKeySecretBytes, SignatureAlgorithm.HS256.getJcaName());
 
-String jwtToken = Jwts.builder().setPayload(payload).signWith(signingKey)
-    .setHeaderParams(header).compact();
+String jwtToken = Jwts.builder().setPayload(payload).signWith(signingKey).setHeaderParams(header).compact();
 
 ```
