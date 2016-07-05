@@ -21,13 +21,6 @@
   <version>2.7.5</version>
 </dependency>
 
-<dependency>
-   <groupId>com.fasterxml.jackson.core</groupId>
-   <artifactId>jackson-databind</artifactId>
-   <version>2.7.5</version>
- </dependency>
-
-
 ```
 
 ```java
