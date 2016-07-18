@@ -180,6 +180,7 @@ b. Any time after the library is initialized
 
 ##### Enable data syncing
 ```java
+AvaamoSDK sdk = new AvaamoSDK(this);
 sdk.enableSyncConversations();
 sdk.enableSyncContacts();
 sdk.enableSyncCompanyContacts();
