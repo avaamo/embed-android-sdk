@@ -124,8 +124,8 @@ compile 'com.squareup.okhttp:okhttp-ws:2.7.2'
   11. Setup is done!.
 
 
-###### Initializing the app
-- Initialize the Avaamo embed app with 2 mandatory parameters. (This code sample uses sample data. Please use your `partner_uuid` and create the `user_jwt_token` as mentioned below.
+#### Initializing the app
+1. Initialize the Avaamo embed app with 2 mandatory parameters. (This code sample uses sample data. Please use your `partner_uuid` and create the `user_jwt_token` as mentioned below.
 ```java
   Intent intent = new Intent(MainActivity.this, PartnerLoginActivity.class);
   // Dummy data
@@ -142,12 +142,39 @@ user_jwt_token | This is the JWT encoded string. This JWT encoded string has to 
 
 > `user_jwt_token` is a JSON Web Token encoded string of the user data. User data needs to be in the JSON format and needs to encoded using HS256 algorithm and embed_secret provided to you by Avaamo. You can find JWT library of your choice and a demo UI to generate the tokens at https://jwt.io/
 
-  Javascript: [Code Samples](https://github.com/avaamo/embed-android-sdk/blob/master/Javascript.md)
+**Example user JSON**
+```json
+{
+  "uuid": "h89dc70-46a8-4f5b-aa38-4d016a31234",
+  "first_name": "John Doe",
+  "last_name": "John Doe",
+  "email": "john.doe@company.com",
+  "phone": "+16503835760",
+  "custom_attribute1": "value1",
+  "custom_attribute2": "value2"
+}
+```
 
-  Java: [Code Samples](https://github.com/avaamo/embed-android-sdk/blob/master/Java.md)
+Ensure each embed user has a different `uuid`. In case a uuid does not exist, you could use email as the `uuid`. For example
+
+```json
+{
+  "uuid": "john.doe@company.com",
+  "first_name": "John Doe",
+  "last_name": "John Doe",
+  "email": "john.doe@company.com",
+  "phone": "+16503835760",
+  "custom_attribute1": "value1",
+  "custom_attribute2": "value2"
+}
+```
+
+Javascript: [Code Samples](https://github.com/avaamo/embed-android-sdk/blob/master/Javascript.md)
+
+Java: [Code Samples](https://github.com/avaamo/embed-android-sdk/blob/master/Java.md)
 
 
-- That is it!. Avaamo is now embedded in your app. When launched Avaamo embed app shows up like this.
+2. That is it!. Avaamo is now embedded in your app. When launched Avaamo embed app shows up like this.
 
 
 ## Customizations
