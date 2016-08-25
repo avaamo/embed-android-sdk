@@ -34,15 +34,15 @@ Please contact your Avaamo account manager to request these details.
   5. Click on the project, and `Open Module Settings`. In the `Dependencies` tab, click on the `+` button and Add `avaamo` as a module dependency.
   6. Add these repositories to your application's `build.gradle` file.
   ```
-      repositories {
-         maven { url 'https://s3.amazonaws.com/repo.commonsware.com' }
-         maven { url 'https://maven.fabric.io/public' }
-         mavenCentral()
-      }
+  repositories {
+     maven { url 'https://s3.amazonaws.com/repo.commonsware.com' }
+     maven { url 'https://maven.fabric.io/public' }
+     mavenCentral()
+  }
   ```
   7. Add the following dependencies to your application's 'build.gradle' file.
   ```
-      provided 'org.parceler:parceler:0.2.10'
+    provided 'org.parceler:parceler:0.2.10'
     compile('com.crashlytics.sdk.android:crashlytics:2.5.5@aar') {
       transitive = true;
     }
@@ -94,7 +94,7 @@ Please contact your Avaamo account manager to request these details.
     compile 'com.kbeanie:multipicker:1.1.0@aar'
 
     compile 'com.fasterxml.jackson.core:jackson-databind:2.5.3'
-compile 'com.squareup.okhttp:okhttp-ws:2.7.2'
+    compile 'com.squareup.okhttp:okhttp-ws:2.7.2'
   ```
   ![](https://raw.githubusercontent.com/avaamo/embed-android-sdk/master/images/add-dependencies.png)
   > These dependences get downloaded in about 5 minutes on a 1 MBPS speed internet connection.
