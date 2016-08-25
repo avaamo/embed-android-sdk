@@ -35,7 +35,7 @@ Please contact your Avaamo account manager to request these details.
   6. Add these repositories to your application's `build.gradle` file.
   ```
       repositories {
-         maven { url 'https://repo.commonsware.com.s3.amazonaws.com' }
+         maven { url 'https://s3.amazonaws.com/repo.commonsware.com' }
          maven { url 'https://maven.fabric.io/public' }
          mavenCentral()
       }
@@ -114,6 +114,12 @@ compile 'com.squareup.okhttp:okhttp-ws:2.7.2'
        tools:replace="android:theme, android:icon">
   ```
   9. In your app/src/main/AndroidManifest.xml file, include PartnerLoginActivity and meta-data tag.
+  ```xml
+      <activity 
+          android:name="com.avaamo.android.ui.PartnerLoginActivity" 
+          android:label="Title of your application">
+      </activity>
+  ```
   10. Add these four permissions to your app/src/main/AndroidManifest.xml file inside the <manifest> element.
   ```xml
    <uses-permission android:name="android.permission.READ_CONTACTS" />
@@ -121,7 +127,29 @@ compile 'com.squareup.okhttp:okhttp-ws:2.7.2'
    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
   ```
-  11. Setup is done!.
+  11. Add the following snippets to your application's build.gradle file. (In the default config section)
+  ```
+    defaultConfig {
+      ...
+      multiDexEnabled true 
+      ...
+  ```
+  12. Configure Android Studio to use more memory.
+  ```
+  dexOptions {
+        incremental true
+        preDexLibraries = true
+        javaMaxHeapSize "4g"
+    }
+  ```
+  13. Library conflicts configuration
+  ```
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+    }
+  ```
+  14. Setup is done!.
 
 
 #### Initializing the app
@@ -194,16 +222,35 @@ To start receiving avaamo notifications even before a user tap on a button or a 
      <item name="background">yourcolorcode</item>
   </style>
 ```
+Specify your app's base colors
+```xml
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+</resources>
+```
+Set the base colors to your theme
+```xml
+<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+</style>
+```
 
 ##### Open Avaamo with a deeplink
 a. While initializing the library
 ```java
-       intent.putExtra("deeplink" ,<deeplink url>)
+intent.putExtra("deeplink" ,<deeplink url>)
 ```
 b. Any time after the library is initialized
 ```java
-	     AvaamoUtils.openDeeplink(<deeplink url>)
+AvaamoUtils.openDeeplink(<deeplink url>)
 ```
+
+This [ page ](https://github.com/avaamo/java/wiki/Deep-Links) has more information about all the available deeplinks
 
 ##### Enable data syncing
 ```java
@@ -214,7 +261,6 @@ sdk.enableSyncCompanyContacts();
 sdk.enableSyncBroadcasts();
 sdk.enableSyncBots();
 ```
-This [ page ](https://github.com/avaamo/java/wiki/Deep-Links) has more information about all the available deeplinks
 
 ##### Listening for Avaamo events
   - For a new message
