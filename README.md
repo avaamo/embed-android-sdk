@@ -78,7 +78,7 @@ Please contact your Avaamo account manager to request these details.
     compile 'com.google.code.gson:gson:2.4'
     compile 'com.google.guava:guava:18.0'
     compile 'com.jakewharton.timber:timber:2.4.0'
-    compile 'com.birbit:android-priority-jobqueue:1.3.5'
+    compile 'com.birbit:android-priority-jobqueue:2.0.0'
     compile 'com.commonsware.cwac:wakeful:1.1.0'
     compile 'org.parceler:parceler-api:0.2.10'
     compile 'com.github.johnkil.android-progressfragment:progressfragment-native:1.4.0'
@@ -92,7 +92,7 @@ Please contact your Avaamo account manager to request these details.
     compile 'net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:1.0.0'
     compile 'de.hdodenhof:circleimageview:2.0.0'
     compile 'com.kbeanie:multipicker:1.1.0@aar'
-
+    compile 'com.github.gcacace:signature-pad:1.2.0'
     compile 'com.fasterxml.jackson.core:jackson-databind:2.5.3'
     compile 'com.squareup.okhttp:okhttp-ws:2.7.2'
   ```
@@ -283,4 +283,12 @@ sdk.enableSyncBots();
 ##### Access badge count
 ```java
   AvaamoUtils.getBadge()
+```
+
+##### Enable Google maps
+After signing up for Google Maps for android and setting up an API key, add this meta-data tag in the AndroidManifest.xml file of your app, just before the end of application tag.
+```
+<meta-data tools:replace="android:value"
+    android:name="com.google.android.maps.v2.API_KEY"
+    android:value="your-api-key" />
 ```
