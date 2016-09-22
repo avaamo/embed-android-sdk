@@ -24,8 +24,7 @@ Please contact your Avaamo account manager to request these details.
 1. Create an android application with Android Studio.
 2. To import the Avaamo Embed SDK, follow these steps.
   1. Go to `File: New Module`.
-  2. Choose `Import JAR/AAR package`.
-  ![](https://raw.githubusercontent.com/avaamo/embed-android-sdk/master/images/add-aar-depencency.png)
+  2. Choose `Import JAR/AAR package`.![](https://raw.githubusercontent.com/avaamo/embed-android-sdk/master/images/add-aar-depencency.png)
   3. On the next screen, for the File name field, navigate to the SDK aar file, and select it's path.
   ![](https://raw.githubusercontent.com/avaamo/embed-android-sdk/master/images/add-module.png)
   ![](https://raw.githubusercontent.com/avaamo/embed-android-sdk/master/images/add-module-2.png)
