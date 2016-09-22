@@ -286,3 +286,8 @@ After signing up for Google Maps for android and setting up an API key, add this
     android:name="com.google.android.maps.v2.API_KEY"
     android:value="your-api-key" />
 ```
+
+##### Enable Push notifications
+Create a project for enabling GCM Push notifications on Google cloud console if you don't already have one.
+
+Declare a string resource named ```GCM_SENDER_ID``` with the SENDER ID as the value.
