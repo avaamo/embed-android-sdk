@@ -113,28 +113,22 @@ Please contact your Avaamo account manager to request these details.
        android:theme="@style/Avaamo"
        tools:replace="android:theme, android:icon">
   ```
-  9. In your app/src/main/AndroidManifest.xml file, include PartnerLoginActivity and meta-data tag.
-  ```xml
-      <activity 
-          android:name="com.avaamo.android.ui.PartnerLoginActivity" 
-          android:label="Title of your application">
-      </activity>
-  ```
-  10. Add these four permissions to your app/src/main/AndroidManifest.xml file inside the <manifest> element.
+
+  9. Add these four permissions to your app/src/main/AndroidManifest.xml file inside the <manifest> element.
   ```xml
    <uses-permission android:name="android.permission.READ_CONTACTS" />
    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
   ```
-  11. Add the following snippets to your application's build.gradle file. (In the default config section)
+  10. Add the following snippets to your application's build.gradle file. (In the default config section)
   ```
     defaultConfig {
       ...
       multiDexEnabled true 
       ...
   ```
-  12. Configure Android Studio to use more memory.
+  11. Configure Android Studio to use more memory.
   ```
   dexOptions {
         incremental true
@@ -142,14 +136,14 @@ Please contact your Avaamo account manager to request these details.
         javaMaxHeapSize "4g"
     }
   ```
-  13. Library conflicts configuration
+  12. Library conflicts configuration
   ```
     packagingOptions {
         exclude 'META-INF/LICENSE'
         exclude 'META-INF/NOTICE'
     }
   ```
-  14. Setup is done!.
+  13. Setup is done!.
 
 
 #### Initializing the app
