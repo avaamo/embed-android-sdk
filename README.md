@@ -10,8 +10,8 @@
 ###### [Open Avaamo with a deeplink](#open-avaamo-with-a-deeplink-1)
 ###### [Listening for Avaamo events](#listening-for-avaamo-events-1)
 ###### [Access badge count](#access-badge-count-1)
-###### [Enable Google Maps](#enable-google-maps)
-###### [Enable Push Notifications](#enable-push-notifications)
+###### [Enable Google Maps](#enable-google-maps-1)
+###### [Enable Push Notifications](#enable-push-notifications-1)
 ###### [Enable Crash Logs](#enable-crash-logs-using-fabric)
 
 
