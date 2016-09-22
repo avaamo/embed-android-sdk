@@ -291,3 +291,30 @@ After signing up for Google Maps for android and setting up an API key, add this
 Create a project for enabling GCM Push notifications on Google cloud console if you don't already have one.
 
 Declare a string resource named ```GCM_SENDER_ID``` with the SENDER ID as the value.
+
+##### Enable Crash Logs (Using Fabric)
+Add these lines to your application's build.gradle
+```
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+```
+
+```
+repositories {
+    ...
+    maven { url 'https://maven.fabric.io/public' }
+    mavenCentral()
+}
+```
+
+Enable crash reporting by applying the Fabric plugin right after android application plugin.
+```
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+```
