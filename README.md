@@ -259,7 +259,7 @@ sdk.enableSyncBots();
 ```
 
 ##### Listening for Avaamo events
-  - For a new message
+For a new message
 ```xml
     <receiver android:name="AvaamoBroadcastReceiver">
      <intent-filter>
