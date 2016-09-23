@@ -215,9 +215,11 @@ To start receiving avaamo notifications even before a user tap on a button or a 
 ##### Change color theme
 ```xml
   <style name="Avaamo.ActionBarStyle">
-     <item name="background">yourcolorcode</item>
+     <item name="background">@color/colorPrimary</item>
   </style>
 ```
+The background color above should be the same as the primary color of your app.
+
 Specify your app's base colors
 ```xml
 <resources>
