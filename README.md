@@ -150,52 +150,52 @@ Please contact your Avaamo account manager to request these details.
 
 #### Initializing the app
 1. Initialize the Avaamo embed app with 2 mandatory parameters. (This code sample uses sample data. Please use your `partner_uuid` and create the `user_jwt_token` as mentioned below.
-```java
-  Intent intent = new Intent(MainActivity.this, PartnerLoginActivity.class);
-  // Dummy data
-  intent.putExtra("partner_uuid","2671a7f3-4fea-49ae-835a-95771bbe5ffd");
-  intent.putExtra("user_jwt_token", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiMTIzNDU2Nzg5MCIsImZpcnN0X25hbWUiOiJKb2huIiwibGFzdF9uYW1lIjoiU21pdGgiLCJlbWFpbCI6ImpzbWl0aEBhdmFhbW8uY29tIiwicGhvbmUiOiIrMTIzNDU2Nzg5IiwiY3VzdG9tMSI6InZhbHVlMSJ9.XDk8boUHwd3fotdDxlmP3cHPthwTw5Y57mXLyc6cc9I");
-  startActivity(intent);
-```
-**Description of parameters**
+  ```java
+    Intent intent = new Intent(MainActivity.this, PartnerLoginActivity.class);
+    // Dummy data
+    intent.putExtra("partner_uuid","2671a7f3-4fea-49ae-835a-95771bbe5ffd");
+    intent.putExtra("user_jwt_token", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiMTIzNDU2Nzg5MCIsImZpcnN0X25hbWUiOiJKb2huIiwibGFzdF9uYW1lIjoiU21pdGgiLCJlbWFpbCI6ImpzbWl0aEBhdmFhbW8uY29tIiwicGhvbmUiOiIrMTIzNDU2Nzg5IiwiY3VzdG9tMSI6InZhbHVlMSJ9.XDk8boUHwd3fotdDxlmP3cHPthwTw5Y57mXLyc6cc9I");
+    startActivity(intent);
+  ```
+  **Description of parameters**
 
-Name | Description | Required
----- | ----------- | --------
-partner_uuid | This will identify your company and the embed.  This is unique to each embed. If you are embedding Avaamo in an another app, please request a new partner_uuid | Yes
-user_jwt_token | This is the JWT encoded string. This JWT encoded string has to include 3 mandatory user identification parameters. `uuid`, `first_name`, `last_name`. <br/><br/>Add one or more of these optional parameters. `email`, `phone`. <br/><br/>You can also include other custom properties which will come handy when creating broadcast lists within Avaamo Dashboard. | Yes
+  Name | Description | Required
+  ---- | ----------- | --------
+  partner_uuid | This will identify your company and the embed.  This is unique to each embed. If you are embedding Avaamo in an another app, please request a new partner_uuid | Yes
+  user_jwt_token | This is the JWT encoded string. This JWT encoded string has to include 3 mandatory user identification parameters. `uuid`, `first_name`, `last_name`. <br/><br/>Add one or more of these optional parameters. `email`, `phone`. <br/><br/>You can also include other custom properties which will come handy when creating broadcast lists within Avaamo Dashboard. | Yes
 
-> `user_jwt_token` is a JSON Web Token encoded string of the user data. User data needs to be in the JSON format and needs to encoded using HS256 algorithm and embed_secret provided to you by Avaamo. You can find JWT library of your choice and a demo UI to generate the tokens at https://jwt.io/
+  > `user_jwt_token` is a JSON Web Token encoded string of the user data. User data needs to be in the JSON format and needs to encoded using HS256 algorithm and embed_secret provided to you by Avaamo. You can find JWT library of your choice and a demo UI to generate the tokens at https://jwt.io/
 
-**Example user JSON**
-```json
-{
-  "uuid": "h89dc70-46a8-4f5b-aa38-4d016a31234",
-  "first_name": "John Doe",
-  "last_name": "John Doe",
-  "email": "john.doe@company.com",
-  "phone": "+16503835760",
-  "custom_attribute1": "value1",
-  "custom_attribute2": "value2"
-}
-```
+  **Example user JSON**
+  ```json
+  {
+    "uuid": "h89dc70-46a8-4f5b-aa38-4d016a31234",
+    "first_name": "John Doe",
+    "last_name": "John Doe",
+    "email": "john.doe@company.com",
+    "phone": "+16503835760",
+    "custom_attribute1": "value1",
+    "custom_attribute2": "value2"
+  }
+  ```
 
-Ensure each embed user has a different `uuid`. In case a uuid does not exist, you could use email as the `uuid`. For example
+  Ensure each embed user has a different `uuid`. In case a uuid does not exist, you could use email as the `uuid`. For example
 
-```json
-{
-  "uuid": "john.doe@company.com",
-  "first_name": "John Doe",
-  "last_name": "John Doe",
-  "email": "john.doe@company.com",
-  "phone": "+16503835760",
-  "custom_attribute1": "value1",
-  "custom_attribute2": "value2"
-}
-```
+  ```json
+  {
+    "uuid": "john.doe@company.com",
+    "first_name": "John Doe",
+    "last_name": "John Doe",
+    "email": "john.doe@company.com",
+    "phone": "+16503835760",
+    "custom_attribute1": "value1",
+    "custom_attribute2": "value2"
+  }
+  ```
 
-Javascript: [Code Samples](https://github.com/avaamo/embed-android-sdk/blob/master/Javascript.md)
+  Javascript: [Code Samples](https://github.com/avaamo/embed-android-sdk/blob/master/Javascript.md)
 
-Java: [Code Samples](https://github.com/avaamo/embed-android-sdk/blob/master/Java.md)
+  Java: [Code Samples](https://github.com/avaamo/embed-android-sdk/blob/master/Java.md)
 
 
 2. That is it!. Avaamo is now embedded in your app. When launched Avaamo embed app shows up like this.
