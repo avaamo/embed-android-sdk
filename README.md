@@ -29,122 +29,122 @@ Please contact your Avaamo account manager to request these details.
   1. Go to `File: New Module`.
   2. Choose `Import JAR/AAR package`.![](https://raw.githubusercontent.com/avaamo/embed-android-sdk/master/images/add-aar-depencency.png)
   3. On the next screen, for the File name field, navigate to the SDK aar file, and select it's path.
-  ![](https://raw.githubusercontent.com/avaamo/embed-android-sdk/master/images/add-module.png)
-  ![](https://raw.githubusercontent.com/avaamo/embed-android-sdk/master/images/add-module-2.png)
-  ![](https://raw.githubusercontent.com/avaamo/embed-android-sdk/master/images/add-module-3.png)
+    ![](https://raw.githubusercontent.com/avaamo/embed-android-sdk/master/images/add-module.png)
+    ![](https://raw.githubusercontent.com/avaamo/embed-android-sdk/master/images/add-module-2.png)
+    ![](https://raw.githubusercontent.com/avaamo/embed-android-sdk/master/images/add-module-3.png)
   4. Leave the sub-project name (avaamo) as is.
   5. Click on the project, and `Open Module Settings`. In the `Dependencies` tab, click on the `+` button and Add `avaamo` as a module dependency.
   6. Add these repositories to your application's `build.gradle` file.
-  ```
-  repositories {
-     maven { url 'https://s3.amazonaws.com/repo.commonsware.com' }
-     maven { url 'https://maven.fabric.io/public' }
-     mavenCentral()
-  }
-  ```
+    ```
+    repositories {
+       maven { url 'https://s3.amazonaws.com/repo.commonsware.com' }
+       maven { url 'https://maven.fabric.io/public' }
+       mavenCentral()
+    }
+    ```
   7. Add the following dependencies to your application's 'build.gradle' file.
-  ```
-    provided 'org.parceler:parceler:0.2.10'
-    compile('com.crashlytics.sdk.android:crashlytics:2.5.5@aar') {
-      transitive = true;
-    }
-    compile 'com.android.support:support-v13:23.4.0'
-    compile 'com.android.support:appcompat-v7:23.4.0'
-    compile 'com.android.support:design:23.4.0'
-    compile 'com.android.support:cardview-v7:23.4.0'
-    compile 'com.android.support:recyclerview-v7:23.4.0'
-    compile 'com.android.support:multidex:1.0.1'
+    ```
+      provided 'org.parceler:parceler:0.2.10'
+      compile('com.crashlytics.sdk.android:crashlytics:2.5.5@aar') {
+        transitive = true;
+      }
+      compile 'com.android.support:support-v13:23.4.0'
+      compile 'com.android.support:appcompat-v7:23.4.0'
+      compile 'com.android.support:design:23.4.0'
+      compile 'com.android.support:cardview-v7:23.4.0'
+      compile 'com.android.support:recyclerview-v7:23.4.0'
+      compile 'com.android.support:multidex:1.0.1'
 
-    compile 'com.mobsandgeeks:android-saripaar:1.0.2'
-    compile 'com.jakewharton:butterknife:6.0.0'
-    compile 'uk.co.ribot:easyadapter:1.2.0'
-    compile 'com.google.android.gms:play-services-base:9.0.0'
-    compile 'com.google.android.gms:play-services-maps:9.0.0'
-    compile 'com.google.android.gms:play-services-location:9.0.0'
-    compile 'com.google.android.gms:play-services-gcm:9.0.0'
-    compile 'de.greenrobot:eventbus:2.2.1'
-    compile 'com.squareup.phrase:phrase:1.0.3'
-    compile 'com.squareup.picasso:picasso:2.5.2'
-    compile 'com.squareup.okhttp:okhttp:2.7.2'
-    compile 'com.squareup.okio:okio:1.6.0'
-    compile 'com.squareup.okhttp:okhttp-urlconnection:2.7.2'
-    compile 'com.squareup.retrofit:retrofit:1.9.0'
-    compile ('com.squareup.retrofit:converter-simplexml:1.9.0') {
-      exclude group: 'xpp3', module: 'xpp3'
-      exclude group: 'stax', module: 'stax-api'
-      exclude group: 'stax', module: 'stax'
-    }
-    compile 'com.j256.ormlite:ormlite-android:4.48'
-    compile 'com.j256.ormlite:ormlite-core:4.48'
-    compile 'com.googlecode.libphonenumber:libphonenumber:6.2'
-    compile 'com.google.code.gson:gson:2.4'
-    compile 'com.google.guava:guava:18.0'
-    compile 'com.jakewharton.timber:timber:2.4.0'
-    compile 'com.birbit:android-priority-jobqueue:2.0.0'
-    compile 'com.commonsware.cwac:wakeful:1.1.0'
-    compile 'org.parceler:parceler-api:0.2.10'
-    compile 'com.github.johnkil.android-progressfragment:progressfragment-native:1.4.0'
-    compile 'me.leolin:ShortcutBadger:1.1.3@aar'
-    compile 'com.commit451:PhotoView:1.2.5'
-    compile 'net.frakbot:jumpingbeans:1.2.0'
-    compile 'com.parse.bolts:bolts-tasks:1.3.0'
-    compile 'com.mobsandgeeks:adapter-kit:0.5.3'
-    compile 'com.splitwise:tokenautocomplete:2.0.2@aar'
-    compile 'com.github.bumptech.glide:glide:3.7.0'
-    compile 'net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:1.0.0'
-    compile 'de.hdodenhof:circleimageview:2.0.0'
-    compile 'com.kbeanie:multipicker:1.1.0@aar'
-    compile 'com.github.gcacace:signature-pad:1.2.0'
-    compile 'com.fasterxml.jackson.core:jackson-databind:2.5.3'
-    compile 'com.squareup.okhttp:okhttp-ws:2.7.2'
-  ```
-  ![](https://raw.githubusercontent.com/avaamo/embed-android-sdk/master/images/add-dependencies.png)
-  > These dependences get downloaded in about 5 minutes on a 1 MBPS speed internet connection.
+      compile 'com.mobsandgeeks:android-saripaar:1.0.2'
+      compile 'com.jakewharton:butterknife:6.0.0'
+      compile 'uk.co.ribot:easyadapter:1.2.0'
+      compile 'com.google.android.gms:play-services-base:9.0.0'
+      compile 'com.google.android.gms:play-services-maps:9.0.0'
+      compile 'com.google.android.gms:play-services-location:9.0.0'
+      compile 'com.google.android.gms:play-services-gcm:9.0.0'
+      compile 'de.greenrobot:eventbus:2.2.1'
+      compile 'com.squareup.phrase:phrase:1.0.3'
+      compile 'com.squareup.picasso:picasso:2.5.2'
+      compile 'com.squareup.okhttp:okhttp:2.7.2'
+      compile 'com.squareup.okio:okio:1.6.0'
+      compile 'com.squareup.okhttp:okhttp-urlconnection:2.7.2'
+      compile 'com.squareup.retrofit:retrofit:1.9.0'
+      compile ('com.squareup.retrofit:converter-simplexml:1.9.0') {
+        exclude group: 'xpp3', module: 'xpp3'
+        exclude group: 'stax', module: 'stax-api'
+        exclude group: 'stax', module: 'stax'
+      }
+      compile 'com.j256.ormlite:ormlite-android:4.48'
+      compile 'com.j256.ormlite:ormlite-core:4.48'
+      compile 'com.googlecode.libphonenumber:libphonenumber:6.2'
+      compile 'com.google.code.gson:gson:2.4'
+      compile 'com.google.guava:guava:18.0'
+      compile 'com.jakewharton.timber:timber:2.4.0'
+      compile 'com.birbit:android-priority-jobqueue:2.0.0'
+      compile 'com.commonsware.cwac:wakeful:1.1.0'
+      compile 'org.parceler:parceler-api:0.2.10'
+      compile 'com.github.johnkil.android-progressfragment:progressfragment-native:1.4.0'
+      compile 'me.leolin:ShortcutBadger:1.1.3@aar'
+      compile 'com.commit451:PhotoView:1.2.5'
+      compile 'net.frakbot:jumpingbeans:1.2.0'
+      compile 'com.parse.bolts:bolts-tasks:1.3.0'
+      compile 'com.mobsandgeeks:adapter-kit:0.5.3'
+      compile 'com.splitwise:tokenautocomplete:2.0.2@aar'
+      compile 'com.github.bumptech.glide:glide:3.7.0'
+      compile 'net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:1.0.0'
+      compile 'de.hdodenhof:circleimageview:2.0.0'
+      compile 'com.kbeanie:multipicker:1.1.0@aar'
+      compile 'com.github.gcacace:signature-pad:1.2.0'
+      compile 'com.fasterxml.jackson.core:jackson-databind:2.5.3'
+      compile 'com.squareup.okhttp:okhttp-ws:2.7.2'
+    ```
+    ![](https://raw.githubusercontent.com/avaamo/embed-android-sdk/master/images/add-dependencies.png)
+    > These dependences get downloaded in about 5 minutes on a 1 MBPS speed internet connection.
 
   8. In your `app/src/main/AndroidManifest.xml` file, set the theme of your application to `@style/Avaamo` theme, and add `tools:replace=”android:theme, android:icon`. Also add the tools namespace to the manifest tag.
-  ```xml
-      <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-       xmlns:tools="http://schemas.android.com/tools"
-       package="your_package_name">
+    ```xml
+        <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+         xmlns:tools="http://schemas.android.com/tools"
+         package="your_package_name">
 
-    <application
-       android:allowBackup="true"
-       android:icon="@drawable/ic_launcher"
-       android:label="@string/app_name"
-       android:supportsRtl="true"
-       android:theme="@style/Avaamo"
-       tools:replace="android:theme, android:icon">
-  ```
+      <application
+         android:allowBackup="true"
+         android:icon="@drawable/ic_launcher"
+         android:label="@string/app_name"
+         android:supportsRtl="true"
+         android:theme="@style/Avaamo"
+         tools:replace="android:theme, android:icon">
+    ```
 
   9. Add these four permissions to your app/src/main/AndroidManifest.xml file inside the <manifest> element.
-  ```xml
-   <uses-permission android:name="android.permission.READ_CONTACTS" />
-   <uses-permission android:name="android.permission.WRITE_CONTACTS" />
-   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-  ```
+    ```xml
+     <uses-permission android:name="android.permission.READ_CONTACTS" />
+     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    ```
   10. Add the following snippets to your application's build.gradle file. (In the default config section)
-  ```
-    defaultConfig {
-      ...
-      multiDexEnabled true 
-      ...
-  ```
+    ```
+      defaultConfig {
+        ...
+        multiDexEnabled true 
+        ...
+    ```
   11. Configure Android Studio to use more memory.
-  ```
-  dexOptions {
-        incremental true
-        preDexLibraries = true
-        javaMaxHeapSize "4g"
-    }
-  ```
+    ```
+    dexOptions {
+          incremental true
+          preDexLibraries = true
+          javaMaxHeapSize "4g"
+      }
+    ```
   12. Library conflicts configuration
-  ```
-    packagingOptions {
-        exclude 'META-INF/LICENSE'
-        exclude 'META-INF/NOTICE'
-    }
-  ```
+    ```
+      packagingOptions {
+          exclude 'META-INF/LICENSE'
+          exclude 'META-INF/NOTICE'
+      }
+    ```
   13. Setup is done!.
 
 
