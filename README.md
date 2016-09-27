@@ -202,7 +202,7 @@ Please contact your Avaamo account manager to request these details.
 
 
 ## Customizations
-##### Initialize Avaamo in the background
+### 1. Initialize Avaamo in the background
 To start receiving avaamo notifications even before a user tap on a button or a UI elment to launch the Avaamo embed app.
 
 ```java
@@ -212,7 +212,7 @@ To start receiving avaamo notifications even before a user tap on a button or a 
   }
 ```
 
-##### Change color theme
+### 2. Change color theme
 ```xml
   <style name="Avaamo.ActionBarStyle">
      <item name="background">@color/colorPrimary</item>
@@ -238,7 +238,7 @@ Set the base colors to your theme
 </style>
 ```
 
-##### Open Avaamo with a deeplink
+### 3. Open Avaamo with a deeplink
 1. While initializing the library
   ```java
   intent.putExtra("deeplink" ,<deeplink url>)
@@ -250,7 +250,7 @@ Set the base colors to your theme
 
   This [ page ](https://github.com/avaamo/java/wiki/Deep-Links) has more information about all the available deeplinks
 
-##### Enable data syncing
+### 4. Enable data syncing
 ```java
 AvaamoSDK sdk = new AvaamoSDK(this);
 sdk.enableSyncConversations();
@@ -260,7 +260,7 @@ sdk.enableSyncBroadcasts();
 sdk.enableSyncBots();
 ```
 
-##### Listening for Avaamo events
+### 5. Listening for Avaamo events
 For a new message
 ```xml
     <receiver android:name="AvaamoBroadcastReceiver">
@@ -278,12 +278,12 @@ For a new message
        }
     }
 ```
-##### Access badge count
+### 6. Access badge count
 ```java
   AvaamoUtils.getBadge()
 ```
 
-##### Enable Google maps
+### 7. Enable Google maps
 After signing up for Google Maps for android and setting up an API key, add this meta-data tag in the AndroidManifest.xml file of your app, just before the end of application tag.
 ```
 <meta-data tools:replace="android:value"
@@ -291,12 +291,12 @@ After signing up for Google Maps for android and setting up an API key, add this
     android:value="your-api-key" />
 ```
 
-##### Enable Push notifications
+### 8. Enable Push notifications
 Create a project for enabling GCM Push notifications on Google cloud console if you don't already have one.
 
 Declare a string resource named ```GCM_SENDER_ID``` with the SENDER ID as the value.
 
-##### Enable Crash Logs (Using Fabric)
+### 9. Enable Crash Logs (Using Fabric)
 Add these lines to your application's build.gradle
 ```
 buildscript {
